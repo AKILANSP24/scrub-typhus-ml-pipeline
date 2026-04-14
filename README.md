@@ -58,24 +58,24 @@ The system operates through four connected stages:
 │  STAGE 1A — GENOMIC DETECTION + SEVERITY SCORE                  │
 │  Binary: Logistic Regression + LOO-CV → 89% accuracy            │
 │  3-Class: Healthy / Convalescent / Infected                     │
-│  Severity: Ridge Regression → continuous score 0.0 → 1.0       │
+│  Severity: Ridge Regression → continuous score 0.0 → 1.0        │
 │  SHAP: LinearExplainer (waterfall, beeswarm, bar)               │
 └────────────────────────┬────────────────────────────────────────┘
                          │
 ┌────────────────────────▼────────────────────────────────────────┐
 │  STAGE 1B — CLINICAL DIFFERENTIAL DIAGNOSIS                     │
-│  XGBoost + SMOTE | 2,710 patients (77.9% real data)            │
-│  Classes: Scrub Typhus · Dengue · Malaria · Lepto · Typhoid    │
-│  Result: 97% accuracy | F1 macro = 0.973 | AUC 0.997–1.000     │
+│  XGBoost + SMOTE | 2,710 patients (77.9% real data)             │
+│  Classes: Scrub Typhus · Dengue · Malaria · Lepto · Typhoid     │
+│  Result: 97% accuracy | F1 macro = 0.973 | AUC 0.997–1.000      │
 │  SHAP: TreeExplainer (global importance, beeswarm)              │
 └────────────────────────┬────────────────────────────────────────┘
                          │ (Activates when ST probability > threshold)
 ┌────────────────────────▼────────────────────────────────────────┐
 │  STAGE 2 — ORGAN COMPLICATION RISK PREDICTION                   │
 │  Three independent Random Forest models + SMOTE                 │
-│  ├── AKI Risk:     AUC = 1.0000  (Top SHAP: Creatinine)        │
-│  ├── Hepatic Risk: AUC = 0.9999  (Top SHAP: AST)              │
-│  └── ICU Risk:     AUC = 0.9691  (Top SHAP: CRP)              │
+│  ├── AKI Risk:     AUC = 1.0000  (Top SHAP: Creatinine)         │
+│  ├── Hepatic Risk: AUC = 0.9999  (Top SHAP: AST)                │
+│  └── ICU Risk:     AUC = 0.9691  (Top SHAP: CRP)                │
 │  SHAP: LinearExplainer per organ model                          │
 └─────────────────────────────────────────────────────────────────┘
 ```
