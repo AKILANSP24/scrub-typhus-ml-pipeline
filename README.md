@@ -10,7 +10,6 @@
 [![XGBoost](https://img.shields.io/badge/XGBoost-Latest-FF6600?style=flat-square)](https://xgboost.readthedocs.io)
 [![SHAP](https://img.shields.io/badge/SHAP-Explainability-00C49F?style=flat-square)](https://shap.readthedocs.io)
 [![Bowtie2](https://img.shields.io/badge/Bowtie2-2.5.5-4CAF50?style=flat-square)](http://bowtie-bio.sourceforge.net/bowtie2)
-[![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](LICENSE)
 [![VIT Chennai](https://img.shields.io/badge/VIT-Chennai-8B0000?style=flat-square)](https://chennai.vit.ac.in)
 
 **Bioinformatics · CSE4067 · J Component Project**
